@@ -1,6 +1,6 @@
 # SMS Automation App
 
-[![Android Build CI](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/actions/workflows/android-build.yml/badge.svg)](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/actions/workflows/android-build.yml)
+[![Android Build CI](https://github.com/jacelarry/my-new-app/actions/workflows/android-build.yml/badge.svg)](https://github.com/jacelarry/my-new-app/actions/workflows/android-build.yml)
 
 An Android application for bulk SMS sending and automation.
 
@@ -17,7 +17,7 @@ The project uses GitHub Actions for continuous integration. Every push to `main`
 
 ### Download APKs
 
-After each successful build, APKs are available in the [Actions tab](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/actions):
+After each successful build, APKs are available in the [Actions tab](https://github.com/jacelarry/my-new-app/actions):
 - `app-debug-jdk17-apk` - Debug APK built with JDK 17
 - `app-debug-jdk21-apk` - Debug APK built with JDK 21
 - `app-release-jdk17-apk` - Release APK built with JDK 17
@@ -27,7 +27,7 @@ Artifacts are retained for 30 days.
 
 ## Manual Build Trigger
 
-You can manually trigger a build from the [Actions tab](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/actions/workflows/android-build.yml) with options:
+You can manually trigger a build from the [Actions tab](https://github.com/jacelarry/my-new-app/actions/workflows/android-build.yml) with options:
 - **All**: Build both debug and release variants
 - **Debug**: Build only debug APK
 - **Release**: Build only release APK

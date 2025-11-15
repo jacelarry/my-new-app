@@ -172,7 +172,7 @@ Dependabot will create weekly PRs for:
 Add this badge to your README (already included):
 
 ```markdown
-[![Android Build CI](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/actions/workflows/android-build.yml/badge.svg)](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/actions/workflows/android-build.yml)
+[![Android Build CI](https://github.com/jacelarry/my-new-app/actions/workflows/android-build.yml/badge.svg)](https://github.com/jacelarry/my-new-app/actions/workflows/android-build.yml)
 ```
 
 **Important:** Replace `YOUR_USERNAME` and `YOUR_REPO_NAME` with actual values.

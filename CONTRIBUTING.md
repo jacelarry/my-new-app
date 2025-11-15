@@ -12,8 +12,8 @@ Thank you for your interest in contributing! This document provides guidelines a
 ### Clone and Build
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-cd YOUR_REPO_NAME
+git clone https://github.com/jacelarry/my-new-app.git
+cd my-new-app
 ./gradlew build
 ```
 
@@ -124,5 +124,4 @@ By contributing, you agree that your contributions will be licensed under the sa
 
 ---
 
-**Note:** Replace `YOUR_USERNAME` and `YOUR_REPO_NAME` with actual values.
-
+*Repository: https://github.com/jacelarry/my-new-app*

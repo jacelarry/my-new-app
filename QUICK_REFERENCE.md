@@ -58,7 +58,7 @@ Release: app/build/outputs/apk/release/app-release-unsigned.apk
 ## 🏷️ Badges
 
 ```markdown
-[![Android Build CI](https://github.com/USERNAME/REPO/actions/workflows/android-build.yml/badge.svg)](https://github.com/USERNAME/REPO/actions/workflows/android-build.yml)
+[![Android Build CI](https://github.com/jacelarry/my-new-app/actions/workflows/android-build.yml/badge.svg)](https://github.com/jacelarry/my-new-app/actions/workflows/android-build.yml)
 ```
 
 ## 🔧 Troubleshooting
@@ -144,10 +144,10 @@ chore: maintenance tasks
 
 ## 🔗 Quick Links
 
-- [Actions Tab](https://github.com/USERNAME/REPO/actions)
-- [Releases](https://github.com/USERNAME/REPO/releases)
-- [Issues](https://github.com/USERNAME/REPO/issues)
-- [Pull Requests](https://github.com/USERNAME/REPO/pulls)
+- [Actions Tab](https://github.com/jacelarry/my-new-app/actions)
+- [Releases](https://github.com/jacelarry/my-new-app/releases)
+- [Issues](https://github.com/jacelarry/my-new-app/issues)
+- [Pull Requests](https://github.com/jacelarry/my-new-app/pulls)
 
 ---
 
