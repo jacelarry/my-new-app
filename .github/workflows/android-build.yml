@@ -67,7 +67,7 @@ jobs:
 
       - name: Upload Debug APK
         if: github.event.inputs.build_variant == 'debug' || github.event.inputs.build_variant == 'all' || github.event.inputs.build_variant == ''
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: app-debug-jdk${{ matrix.java-version }}-apk
           path: app/build/outputs/apk/debug/app-debug.apk
@@ -76,7 +76,7 @@ jobs:
 
       - name: Upload Release APK
         if: github.event.inputs.build_variant == 'release' || github.event.inputs.build_variant == 'all' || github.event.inputs.build_variant == ''
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: app-release-jdk${{ matrix.java-version }}-apk
           path: app/build/outputs/apk/release/app-release-unsigned.apk
@@ -85,7 +85,7 @@ jobs:
 
       - name: Upload Test Results
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: test-results-jdk${{ matrix.java-version }}
           path: app/build/test-results/
@@ -94,7 +94,7 @@ jobs:
 
       - name: Upload Build Reports
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: build-reports-jdk${{ matrix.java-version }}
           path: app/build/reports/
