@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">sms automation app</string>
+    <string name="import_contacts_title">Import Contacts</string>
+    <string name="import_excel_button">IMPORT FROM EXCEL/CSV</string>
+    <string name="import_excel_info">Import contacts from CSV or Excel file</string>
+    <string name="import_phone_button">IMPORT FROM PHONE CONTACTS</string>
+    <string name="import_phone_info">Select and add contacts from device (tap multiple times to add more)</string>
+    <string name="csv_contacts_imported">%1$d CSV contacts imported</string>
+    <string name="phone_contacts_imported">%1$d phone contacts imported</string>
+    <string name="contacts_imported">%1$d contacts imported</string>
+    <string name="interactive_message_label">Interactive Message</string>
+    <string name="interactive_message_hint">Type interactive message (e.g., Option 1: Bundles 250MB for Ksh20)…</string>
+    <string name="regular_message_label">Regular Message</string>
+    <string name="regular_message_hint">Type normal message here…</string>
+    <string name="send_button">Send</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="back_button">Back</string>
+    <string name="toast_enter_message">Please enter at least one message</string>
+    <string name="toast_no_contacts">No contacts imported</string>
+    <string name="toast_cleared">Cleared</string>
+    <string name="toast_imported_csv">Imported %1$d contacts from Excel/CSV</string>
+    <string name="toast_imported_contact">Imported: %1$s</string>
+    <string name="toast_error_csv">Error importing CSV: %1$s</string>
+    <string name="toast_error_contact">Error importing contact: %1$s</string>
+    <string name="permission_required">Contact permission is required</string>
+    <string name="confirm_send_title">Confirm Send</string>
+    <string name="confirm_send_message">Ready to send to %1$d contacts</string>
+    <string name="confirm_send_now">Send Now</string>
+    <string name="sending_progress_title">Sending Messages</string>
+    <string name="sending_progress_template">Sending %1$d of %2$d
+Success: %3$d | Failed: %4$d</string>
+    <string name="sending_complete_title">Sending Complete</string>
+    <string name="sending_results_template">Message Sending Results:
+
+✅ Successfully sent: %1$d
+❌ Failed: %2$d
+
+Total: %3$d</string>
+    <string name="send_to_all_toggle">Send to All (CSV + Phone)</string>
+    <string name="clear_csv_contacts">Clear CSV contacts</string>
+    <string name="clear_phone_contacts">Clear Phone contacts</string>
+    <string name="parsing_file">Parsing file…</string>
+    <string name="loading_contacts">Loading contacts…</string>
+    <string name="no_contacts_found">No contacts found</string>
+    <string name="select_contacts_title">Select Contacts</string>
+    <string name="add_selected_button">Add Selected</string>
+    <string name="added_n_contacts">Added %1$d contacts</string>
+    <string name="group_count">%1$d contacts</string>
+    <string name="campaign_meta_format">%1$d sent • %2$d delivered • %3$d failed</string>
+    <string name="groups_title">Groups &amp; Contacts</string>
+    <string name="create_new_group">Create New Group</string>
+    <string name="send_status_title">Send Status</string>
+    <string name="notification_sending_title">Sending SMS</string>
+    <string name="notification_cancel">Cancel</string>
+    <string name="card_history">History</string>
+    <string name="card_compose">Compose</string>
+</resources>

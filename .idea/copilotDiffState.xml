@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/app/src/main/res/values/themes.xml">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/app/src/main/res/values/themes.xml" />
+              <option name="originalContent" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#10;&lt;resources xmlns:tools=&quot;http://schemas.android.com/tools&quot;&gt;&#10;    &lt;!-- Base application theme. --&gt;&#10;    &lt;style name=&quot;Base.Theme.SmsAutomationApp&quot; parent=&quot;Theme.Material3.DayNight.NoActionBar&quot;&gt;&#10;        &lt;!-- Customize your light theme here. --&gt;&#10;        &lt;!-- &lt;item name=&quot;colorPrimary&quot;&gt;@color/my_light_primary&lt;/item&gt; --&gt;&#10;&#10;        &lt;!-- Shape Appearance Overlays --&gt;&#10;        &lt;item name=&quot;materialButtonStyle&quot;&gt;@style/Widget.App.CustomButton&lt;/item&gt;&#10;        &lt;item name=&quot;materialCardViewStyle&quot;&gt;@style/Widget.App.CustomCard&lt;/item&gt;&#10;    &lt;/style&gt;&#10;&#10;    &lt;style name=&quot;Theme.SmsAutomationApp&quot; parent=&quot;Base.Theme.SmsAutomationApp&quot; /&gt;&#10;&#10;    &lt;!-- Rounded button style --&gt;&#10;    &lt;style name=&quot;Widget.App.CustomButton&quot; parent=&quot;@style/Widget.Material3.Button&quot;&gt;&#10;        &lt;item name=&quot;cornerRadius&quot;&gt;28dp&lt;/item&gt;&#10;    &lt;/style&gt;&#10;&#10;    &lt;!-- Rounded material card style --&gt;&#10;    &lt;style name=&quot;Widget.App.CustomCard&quot; parent=&quot;@style/Widget.Material3.MaterialCardView&quot;&gt;&#10;        &lt;item name=&quot;cardCornerRadius&quot;&gt;20dp&lt;/item&gt;&#10;    &lt;/style&gt;&#10;&lt;/resources&gt;&#10;" />
+              <option name="updatedContent" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#10;&lt;resources xmlns:tools=&quot;http://schemas.android.com/tools&quot;&gt;&#10;    &lt;!-- Base application theme --&gt;&#10;    &lt;style name=&quot;Base.Theme.SmsAutomationApp&quot; parent=&quot;Theme.Material3.DayNight.NoActionBar&quot;&gt;&#10;        &lt;!-- Customize your light theme here --&gt;&#10;    &lt;/style&gt;&#10;&#10;    &lt;style name=&quot;Theme.SmsAutomationApp&quot; parent=&quot;Base.Theme.SmsAutomationApp&quot; /&gt;&#10;&lt;/resources&gt;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

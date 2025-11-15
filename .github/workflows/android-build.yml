@@ -1,0 +1,102 @@
+name: Android Build CI
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+  workflow_dispatch:
+    inputs:
+      build_variant:
+        description: 'Build variant to compile'
+        required: false
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - debug
+          - release
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java-version: [17, 21]
+      fail-fast: false
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK ${{ matrix.java-version }}
+        uses: actions/setup-java@v4
+        with:
+          distribution: "temurin"
+          java-version: ${{ matrix.java-version }}
+
+      - name: Cache Gradle packages
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+            ~/.gradle/build-cache
+          key: ${{ runner.os }}-gradle-jdk${{ matrix.java-version }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-jdk${{ matrix.java-version }}-
+            ${{ runner.os }}-gradle-
+
+      - name: Make Gradle wrapper executable
+        run: chmod +x ./gradlew
+
+      - name: Clean build directory
+        run: ./gradlew clean --no-daemon
+
+      - name: Build Debug APK
+        if: github.event.inputs.build_variant == 'debug' || github.event.inputs.build_variant == 'all' || github.event.inputs.build_variant == ''
+        run: ./gradlew :app:assembleDebug --no-daemon --stacktrace --info
+
+      - name: Build Release APK
+        if: github.event.inputs.build_variant == 'release' || github.event.inputs.build_variant == 'all' || github.event.inputs.build_variant == ''
+        run: ./gradlew :app:assembleRelease --no-daemon --stacktrace --info
+
+      - name: Run Unit Tests
+        run: ./gradlew :app:testDebugUnitTest --no-daemon --stacktrace
+        continue-on-error: true
+
+      - name: Upload Debug APK
+        if: github.event.inputs.build_variant == 'debug' || github.event.inputs.build_variant == 'all' || github.event.inputs.build_variant == ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-debug-jdk${{ matrix.java-version }}-apk
+          path: app/build/outputs/apk/debug/app-debug.apk
+          retention-days: 30
+          if-no-files-found: warn
+
+      - name: Upload Release APK
+        if: github.event.inputs.build_variant == 'release' || github.event.inputs.build_variant == 'all' || github.event.inputs.build_variant == ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-release-jdk${{ matrix.java-version }}-apk
+          path: app/build/outputs/apk/release/app-release-unsigned.apk
+          retention-days: 30
+          if-no-files-found: warn
+
+      - name: Upload Test Results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results-jdk${{ matrix.java-version }}
+          path: app/build/test-results/
+          retention-days: 14
+          if-no-files-found: ignore
+
+      - name: Upload Build Reports
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-reports-jdk${{ matrix.java-version }}
+          path: app/build/reports/
+          retention-days: 7
+          if-no-files-found: ignore
