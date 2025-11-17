@@ -97,7 +97,7 @@ dependencies {
     implementation("com.airbnb.android:lottie:6.1.0")
 
     // WorkManager
-    implementation("androidx.work:work-runtime-ktx:2.8.1")
+    implementation("androidx.work:work-runtime-ktx:2.11.0")
 
     // DataStore Preferences
     implementation("androidx.datastore:datastore-preferences:1.0.0")
